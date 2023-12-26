@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portfolio | Manolo A. Fernandez</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Bai+Jamjuree:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+			<div class="jumbo">
+				<div class="video-background">
+					<video id="video-background-video" height="100%" muted autoplay loop playsinline>
+						<source src="graphics/backgTop.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="gradient-overlay"></div>
+				<div class="hero-text">
+					<h1>Manolo A. Fernández Vargas</h1>
+					<h2>Comunicador Social Audiovisual</h2>
+				</div>
+			</div>
+	</header>
+	<section>
+		<div class="section-header">
+			<h1>Video Editing</h1>
+		</div>
+		<div class="transition-pic" style="text-align: center;">
+			<img style="max-width: 80vw;" src="graphics/editAppRain.png">
+		</div>
+		<div class="content-box">
+			<div class="edit-container">
+				<div style="flex: 2;">
+					<div class="edit-list">
+						<ul id="ve-compare-list">
+							<li>Color Correction</li>
+							<li>Color Grading</li>
+							<li>FX & Compositing</li>
+						</ul>						
+					</div>
+				</div>
+				<div style="flex: 3;">
+					<div class="edit-video-container">
+						<video muted loop autoplay playsinline preload="auto" width="100%" src="graphics/do0ba.mp4" type="video/mp4"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="section-header">
+			<h1>Motion Graphics</h1>
+		</div>
+		<div class="transition-pic" style="text-align: center;">
+			<img style="max-width: 80vw;" src="graphics/mographAppRain.png">
+		</div>
+		<div class="center-box">
+			<div class="mograph-video-container">
+				<video id="mograph-video" muted controls playsinline width="100%" src="graphics/2D Logo reel.mp4" type="video/mp4"/>
+			</div>
+			<div class="mograph-list">
+				<ul>
+					<li href="graphics/2D Logo reel.mp4">2D Logos</li>
+					<li href="graphics/3D Logo.mp4">3D Logos</li>
+					<li href="graphics/Tutorials.mp4">Video Tutorials</li>
+					<li href="graphics/Social Media.mp4">Social Media & Live Flyers</li>
+				</ul>
+			</div>
+			<script type="text/javascript" src="scripts/videoMenu.js"></script>
+		</div>
+	</section>
+	<section>
+		<div class="section-header">
+			<h1>3D & Interactive</h1>
+		</div>
+		<div style="height: 100pt;">
+			<div style="margin: 10pt 50px;">
+				<h2>Something really nice will be placed here shortly.</h2>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-box">
+			<h3>Contact me:</h3>
+			<ul style="list-style: none;">
+				<li><a href="mailto:manoloferandezvargas@gmail.com">manolofernandezvargas@gmail.com</a></li>
+				<li><a href="https://wa.me/51965439946">Whatsapp</a></li>
+			</ul>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		document.getElementById("video-background-video").play();
+	</script>
+</body>
+</html>
