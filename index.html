@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Bai+Jamjuree:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/gsap.all.js"></script>
 </head>
 <body>
 	<header>
@@ -32,22 +33,25 @@
 		<div class="transition-pic" style="text-align: center;">
 			<img style="max-width: 80vw;" src="graphics/editAppRain.png">
 		</div>
-		<div class="content-box">
-			<div class="edit-container">
+		<div class="content-box" id="video-scroll-space">
+			<div id="edit-trigger" style="height: 200pt;"></div>
+			<div class="edit-container">				
 				<div style="flex: 2;">
 					<div class="edit-list">
-						<ul id="ve-compare-list">
-							<li>Color Correction</li>
-							<li>Color Grading</li>
-							<li>FX & Compositing</li>
+						<ul>
+							<li id="edit-title-01">Raw Video</li>
+							<li id="edit-title-02">Color Correction</li>
+							<li id="edit-title-03">Color Grading</li>
+							<li id="edit-title-04">FX & Compositing</li>
 						</ul>						
 					</div>
 				</div>
 				<div style="flex: 3;">
 					<div class="edit-video-container">
-						<video muted loop autoplay playsinline preload="auto" width="100%" src="graphics/do0ba.mp4" type="video/mp4"/>
+						<video id="edit-video" muted loop playsinline preload="auto" width="100%" src="graphics/do0ba.mp4" type="video/mp4"/>
 					</div>
 				</div>
+				<script type="text/javascript" src="scripts/videoScrollControl.js"></script>
 			</div>
 		</div>
 	</section>
@@ -78,7 +82,7 @@
 			<h1>3D & Interactive</h1>
 		</div>
 		<div style="height: 100pt;">
-			<div style="margin: 10pt 50px;">
+			<div style="margin: 0 50px; padding-top: 100pt;">
 				<h2>Something really nice will be placed here shortly.</h2>
 			</div>
 		</div>

@@ -46,10 +46,6 @@ section {
 	margin: 0 10%;
 }
 
-.edit-container {
-	display: flex;
-}
-
 footer {
 	margin: 0;
 	height: 100pt;
@@ -67,6 +63,17 @@ footer {
 /*    Video Editing Styles                           */
 /*---------------------------------------------------*/
 
+#video-scroll-space {
+	height: 2000pt;
+}
+
+.edit-container {
+	display: flex;
+	position: sticky;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 .edit-list {
 	width: fit-content;
 	margin: 0 auto;
@@ -83,6 +90,8 @@ footer {
 	margin-bottom: 18pt;
 	border-left: 0 solid transparent;
 	transition: all 0.2s;
+	transform: translateY(10px);
+	opacity: 0;
 }
 
 /*.edit-list ul li:hover {
@@ -240,6 +249,10 @@ header::after {
 		position: relative;
 		top: initial;
 		margin-left: 20px;
+	}
+
+	#video-scroll-space {
+		height: 2175pt;
 	}
 
 	.edit-container {
