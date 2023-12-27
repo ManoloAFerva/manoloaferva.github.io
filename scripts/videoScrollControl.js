@@ -13,9 +13,13 @@ let editScroll = gsap.timeline({
 	}
 })
 
-editScroll.to('#edit-video', {
-	pause: true,
-	currentTime: 6,
+editScroll.fromTo('#edit-video', 
+	{
+		currentTime: 0,
+	},
+	{
+		pause: true,
+		currentTime: 6,
 }, 0)
 
 editScroll.to('#edit-title-01', {
