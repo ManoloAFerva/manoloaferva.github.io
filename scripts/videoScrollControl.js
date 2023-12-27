@@ -1,7 +1,22 @@
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin()
 
-var lengths = 2;
+var video = document.getElementById('edit-video');
+
+/* Make sure the video is 'activated' on iOS */
+function once(el, event, fn, opts) {
+  var onceFn = function (e) {
+    el.removeEventListener(event, onceFn);
+    fn.apply(this, arguments);
+  };
+  el.addEventListener(event, onceFn, opts);
+  return onceFn;
+}
+
+once(document.documentElement, "touchstart", function (e) {
+  video.play();
+  video.pause();
+});
 
 let editScroll = gsap.timeline({
 	scrollTrigger: {
