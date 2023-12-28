@@ -50,6 +50,8 @@ footer {
 	margin: 0;
 	height: 100pt;
 	border-top: 3pt solid #00A6FF;
+	margin-top: 57vw;
+	background-color: var(--lightblue);
 }
 
 .footer-box {
@@ -159,7 +161,7 @@ footer {
 	width: 100%;
 	height: auto;
 	min-height: 200px;
-	overflow: clip;
+	overflow: hidden;
 }
 
 header::after {
