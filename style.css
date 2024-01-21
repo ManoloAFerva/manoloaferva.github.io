@@ -61,6 +61,32 @@ footer {
 	bottom: 0;
 }
 
+.transition-pic {
+	min-width: 300px;
+	width: 100%;
+	height: 1140px;
+	position: relative;
+	margin: 0 auto;
+	padding-top: 150px;
+/*	border: 1px solid var(--orange);*/
+}
+
+.touch-fix-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: gray;
+	opacity: 0;
+}
+
+.anim-trigger {
+/*	border: 1px solid red;*/
+	position: relative;
+	top: -100px;
+}
+
 /*---------------------------------------------------*/
 /*    Video Editing Styles                           */
 /*---------------------------------------------------*/
@@ -282,6 +308,11 @@ header::after {
 
 	.edit-video-container {
 		margin: 0;
+	}
+
+	.transition-pic {
+		height: 500px;
+		padding-top: 40px;
 	}
 }
 
