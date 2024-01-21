@@ -1,7 +1,5 @@
-import * as lume from "lume";
+// import * as lume from "lume";
 gsap.registerPlugin(ScrollTrigger);
-
-console.log(lume)
 
 var vpWidth = window.matchMedia("(max-width: 800px)")
 
