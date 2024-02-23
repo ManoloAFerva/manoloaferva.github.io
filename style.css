@@ -7,9 +7,9 @@
 }
 
 * {
-	border: 0;
-	margin: 0;
-	padding: 0;
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
 	font-family: Albert Sans, sans-serif;
 	font-weight: 400;
 	color: white;
@@ -50,8 +50,10 @@ footer {
 	margin: 0;
 	height: 100pt;
 	border-top: 3pt solid #00A6FF;
-	margin-top: 57vw;
+/*	margin-top: 57vw;*/
 	background-color: var(--lightblue);
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 .footer-box {
@@ -368,6 +370,38 @@ header::after {
 	position: sticky;
 	top: 0;
 	max-width: 100vw;
+}
+
+/*---- Loader ---------------------------------------*/
+
+#loading_screen {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 4;
+	background-color: var(--blue);
+	opacity: 1;
+}
+
+.loading_icon_container {
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	transform: translateY(-50%);
+}
+
+.loading_icon {
+	border: 16px solid #f3f3f3;
+	border-top: 16px solid var(--orange);
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
 }
 
 /*---------------------------------------------------*/

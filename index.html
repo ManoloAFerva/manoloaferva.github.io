@@ -11,8 +11,15 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/gsap.all.js"></script>
+	<script type="text/javascript">
+		function hasLoaded(){
+			console.log('I have loaded');
+			document.getElementById('loading_screen').hidden = "true";
+		}
+	</script>
 </head>
-<body>
+
+<body onload="hasLoaded()">
 	<!--
 	  JSPM Generator Import Map
 	  Edit URL: https://generator.jspm.io/#U2VhYGBkDM0rySzJSU1hyCnNTXUw0DPWM9BNzCnISNQztgQAdoumOSIA
@@ -53,6 +60,17 @@
 		import * as lume from "lume";
 		console.log(lume);
 	</script>
+
+	<div id="loading_screen">
+		<div class="loading_icon_container">
+			<div class="loading_icon"></div>
+		</div>
+		<div class="hero-text">
+			<h1>Manolo A. Fernández Vargas</h1>
+			<h2>Comunicador Social Audiovisual</h2>
+			<p>Now loading...</p>
+		</div>
+	</div>
 
 	<header>
 			<div class="jumbo">
@@ -147,7 +165,7 @@
 			<script type="text/javascript" src="scripts/videoMenu.js"></script>
 		</div>
 	</section>
-	<section>
+	<section hidden>
 		<div class="section-header">
 			<a href="https://manoloaferva.github.io/portfolio3d/Page"><h1>3D & Interactive</h1></a>
 		</div>
