@@ -40,6 +40,35 @@ section {
 
 .content-box {
 	margin: 0 10%;
+	padding-top: 200px;
+}
+
+.content-grid {
+/*	display: inline-grid;*/
+}
+
+.test-cell {
+	display: inline-block;
+	width: 16em;
+	height: 9em;
+	background-color: orange;
+	background-size: 100%;
+	background-position: center;
+	margin: 5px;
+	padding: 0;
+	border-radius: 1em;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.test-cell:hover {
+	background-size: 110%;
+	transition: 0.2s;
+}
+
+.test-cell:active {
+	background-size: 95%;
+	transition: 0.05s;
 }
 
 .center-box {
@@ -49,11 +78,13 @@ section {
 footer {
 	margin: 0;
 	height: 100pt;
-	border-top: 3pt solid #00A6FF;
+	border-top: 1pt solid white;
 /*	margin-top: 57vw;*/
-	background-color: var(--lightblue);
+/*	background-color: var(--lightblue);*/
 	margin-bottom: 0;
 	padding-bottom: 0;
+	bottom: 0;
+	position: static;
 }
 
 .footer-box {
@@ -87,6 +118,37 @@ footer {
 /*	border: 1px solid red;*/
 	position: relative;
 	top: -100px;
+}
+
+#video-overlay {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	background-color: #000000dd;
+	z-index: 5;
+	top: 0;
+	left: 0;
+}
+
+#video-player {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.close-button {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 50px;
+	top: 30px;
+	border: 2pt solid white;
+	border-radius: 100%;
+	text-align: center;
+	cursor: pointer;
+	color: black;
 }
 
 /*---------------------------------------------------*/
@@ -203,6 +265,11 @@ header::after {
 	height: var(--header-height);
 }
 
+#video-background-video {
+	position: absolute;
+	right: 0;
+}
+
 .gradient-overlay {
 	position: absolute;
 	bottom: 0;
@@ -315,6 +382,10 @@ header::after {
 	.transition-pic {
 		height: 500px;
 		padding-top: 40px;
+	}
+
+	.content-box {
+		padding-top: 50px;
 	}
 }
 

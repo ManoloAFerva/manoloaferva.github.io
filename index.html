@@ -10,7 +10,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Bai+Jamjuree:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script type="text/javascript" src="scripts/gsap.all.js"></script>
 	<script type="text/javascript">
 		function hasLoaded(){
 			console.log('I have loaded');
@@ -20,47 +19,7 @@
 </head>
 
 <body onload="hasLoaded()">
-	<!--
-	  JSPM Generator Import Map
-	  Edit URL: https://generator.jspm.io/#U2VhYGBkDM0rySzJSU1hyCnNTXUw0DPWM9BNzCnISNQztgQAdoumOSIA
-	-->
-	 <script type="importmap">
-	{
-	  "imports": {
-	    "lume": "https://ga.jspm.io/npm:lume@0.3.0-alpha.39/dist/index.js"
-	  },
-	  "scopes": {
-	    "https://ga.jspm.io/": {
-	      "@lume/autolayout": "https://ga.jspm.io/npm:@lume/autolayout@0.10.1/dist/AutoLayout.js",
-	      "@lume/custom-attributes/dist/index.js": "https://ga.jspm.io/npm:@lume/custom-attributes@0.2.3/dist/index.js",
-	      "@lume/element": "https://ga.jspm.io/npm:@lume/element@0.11.6/dist/index.js",
-	      "@lume/eventful": "https://ga.jspm.io/npm:@lume/eventful@0.3.2/dist/index.js",
-	      "@lume/kiwi": "https://ga.jspm.io/npm:@lume/kiwi@0.4.1/dist/kiwi.js",
-	      "@lume/three-projected-material/dist/ProjectedMaterial.js": "https://ga.jspm.io/npm:@lume/three-projected-material@0.3.1/dist/ProjectedMaterial.js",
-	      "classy-solid": "https://ga.jspm.io/npm:classy-solid@0.3.7/dist/index.js",
-	      "element-behaviors": "https://ga.jspm.io/npm:element-behaviors@5.0.3/dist/index.js",
-	      "james-bond": "https://ga.jspm.io/npm:james-bond@0.7.3/dist/index.js",
-	      "lowclass": "https://ga.jspm.io/npm:lowclass@7.0.1/dist/index.js",
-	      "regexr": "https://ga.jspm.io/npm:regexr@2.0.4/dist/index.js",
-	      "solid-js": "https://ga.jspm.io/npm:solid-js@1.8.11/dist/dev.js",
-	      "solid-js/html": "https://ga.jspm.io/npm:solid-js@1.8.11/html/dist/html.js",
-	      "solid-js/store": "https://ga.jspm.io/npm:solid-js@1.8.11/store/dist/dev.js",
-	      "solid-js/web": "https://ga.jspm.io/npm:solid-js@1.8.11/web/dist/dev.js",
-	      "three": "https://ga.jspm.io/npm:three@0.160.0/build/three.module.js",
-	      "three/": "https://ga.jspm.io/npm:three@0.160.0/"
-	    }
-	  }
-	}
-	</script>
 	
-	<!-- ES Module Shims: Import maps polyfill for older browsers without import maps support (eg Safari 16.3) -->
-	<script async src="https://ga.jspm.io/npm:es-module-shims@1.8.2/dist/es-module-shims.js" crossorigin="anonymous"></script>
-
-	<script type="module">
-		import * as lume from "lume";
-		console.log(lume);
-	</script>
-
 	<div id="loading_screen">
 		<div class="loading_icon_container">
 			<div class="loading_icon"></div>
@@ -86,90 +45,37 @@
 				</div>
 			</div>
 	</header>
+	
+<!-- 	<nav>
+		<ul>
+			<li><a href="#video_editing">Video Editing</a></li>
+			<li><a href="#motion_graphics">Motion Graphics</a></li>
+			<li><a href="#3d_vfx">3D & VFX</a></li>
+		</ul>
+	</nav> -->
+
 	<section>
-		<div class="section-header">
-			<h1>Video Editing</h1>
+		<div class="section-header" id="video_editing">
+			<h1>Video Editing & Motion Graphics Portfolio</h1>
 		</div>
-		<div class="transition-pic">
-			<div id="editStart" class="anim-trigger"></div>
-			<lume-scene id="appRainScene" webgl physically-correct-lights perspective="2000">
-				<lume-perspective-camera id="editRainCamera" align-point="0.5 0.5" position="0 0 2000" far="6000" active></lume-perspective-camera>
-				<lume-ambient-light intensity="0.5"></lume-ambient-light>
-				<lume-point-light intensity="500" align-point="0.5 0.5" position="150 -400 150"></lume-point-light>
-				<lume-point-light intensity="500" align-point="0.5 0.5" position="-200 -100 100"></lume-point-light>
-				<lume-point-light intensity="700" align-point="0.5 0.5" position="150 200 200"></lume-point-light>
-				<lume-gltf-model id="premiere" src="graphics/3d-assets/premiere.gltf" align-point="0.5 0.5" mount-point="0.5 0.5 0.5" size="0 0 0" scale="100 100 100" position="200 -350 0"></lume-gltf-model>
-				<lume-gltf-model id="resolve" src="graphics/3d-assets/resolve.gltf" align-point="0.5 0.5" mount-point="0.5 0.5 0.5" size="0 0 0" scale="100 100 100" position="-200 0 -10"></lume-gltf-model>
-				<lume-gltf-model id="fcpx" src="graphics/3d-assets/fcpx.gltf" align-point="0.5 0.5" mount-point="0.5 0.5 0.5" size="0 0 0" scale="100 100 100" position="50 350 -20"></lume-gltf-model>
-			</lume-scene>
-			<div id="editEnd" class="anim-trigger"></div>
-			<div class="touch-fix-overlay"></div>
-		</div>
-		<div class="content-box" id="video-scroll-space">
-			<div id="edit-trigger" style="height: 200pt;"></div>
-			<div class="edit-container">				
-				<div style="flex: 2;">
-					<div class="edit-list">
-						<ul>
-							<li id="edit-title-01">Raw Video</li>
-							<li id="edit-title-02">Color Correction</li>
-							<li id="edit-title-03">Color Grading</li>
-							<li id="edit-title-04">FX & Compositing</li>
-						</ul>						
-					</div>
+		<div class="content-box">
+			<div class="content-grid">
+				<div class="test-cell" id="olva_th" style="background-image: url('graphics/thumbnails/OLVA.png');" data-video-id="https://www.youtube.com/embed/MqMCDBvc0nw">
 				</div>
-				<div style="flex: 3;">
-					<div class="edit-video-container">
-						<video id="edit-video" muted loop playsinline preload="auto" width="100%" src="graphics/do0ba.mp4" type="video/mp4"/>
-					</div>
-				</div>
-				<script type="text/javascript" src="scripts/videoScrollControl.js"></script>
+				<div class="test-cell" id="wiener_th" style="background-image: url('graphics/thumbnails/UNW.png');" data-video-id="https://www.youtube.com/embed/4M2TtRQoyGY?si=7bImsEiUSJ7CtgpH"></div>
+				<div class="test-cell" id="zqr_th" style="background-image: url('graphics/thumbnails/ZQR.png');" data-video-id="https://www.youtube.com/embed/Jhcg7KRF5Hg?si=EoaK1ZPXDyctOs1m"></div>
+				<div class="test-cell" id="tedx_th" style="background-image: url('graphics/thumbnails/TEDX.png');" data-video-id="https://www.youtube.com/embed/vG50OM98MNk?si=7NDyXy7H-7AuelJf"></div>
+				<div class="test-cell" id="epcom_th" style="background-image: url('graphics/thumbnails/EPCOM.png');" data-video-id="https://www.youtube.com/embed/fHmBVdE4p6c?si=f7iCdsI4SAXwPx9r"></div>
+				<div class="test-cell" id="fcm_th" style="background-image: url('graphics/thumbnails/FCM.png');" data-video-id="https://www.youtube.com/embed/Ak34b7FcfoQ?si=sgWxW2D8voufvU4k"></div>
 			</div>
 		</div>
 	</section>
-	<section>
-		<div class="section-header">
-			<h1>Motion Graphics</h1>
-		</div>
-		<div class="transition-pic" style="text-align: center;">
-			<div id="mographRainStart" class="anim-trigger"></div>
-			<lume-scene id="mographRainScene" webgl physically-correct-lights perspective="2000">
-				<lume-perspective-camera id="mographRainCamera" align-point="0.5 0.5" position="0 0 2000" far="6000" active></lume-perspective-camera>
-				<lume-ambient-light intensity="5" color="#00324d"></lume-ambient-light>
-				<lume-directional-light position="500 -500 -500" intensity="3" shadow-map-width="512" shadow-map-height="512"></lume-directional-light>
-				<lume-point-light id="mographFollowLight" intensity="500" align-point="0.5 0.5" position="0 -150 800"></lume-point-light>
-				<lume-element3d id="mographLights" align-point="0.5 0.5">
-					<lume-point-light intensity="500" align-point="0.5 0.5" position="200 -400 300"></lume-point-light>
-					<lume-point-light intensity="500" align-point="0.5 0.5" position="-200 400 400"></lume-point-light>
-				</lume-element3d>
-				<lume-gltf-model id="after" src="graphics/3d-assets/after.gltf" align-point="0.5 0.5" mount-point="0.5 0.5 0.5" size="0 0 0" scale="100 100 100" position="-20 -400 0"></lume-gltf-model>
-				<lume-gltf-model id="motn" src="graphics/3d-assets/motn.gltf" align-point="0.5 0.5" mount-point="0.5 0.5 0.5" size="0 0 0" scale="100 100 100" position="-200 -50 0"></lume-gltf-model>
-				<lume-gltf-model id="blender" src="graphics/3d-assets/blender.gltf" align-point="0.5 0.5" mount-point="0.5 0.5 0.5" size="0 0 0" scale="100 100 100" position="200 -100 0"></lume-gltf-model>
-				<lume-gltf-model id="davinci" src="graphics/3d-assets/resolve.gltf" align-point="0.5 0.5" mount-point="0.5 0.5 0.5" size="0 0 0" scale="100 100 100" position="100 300 0"></lume-gltf-model>
-			</lume-scene>
-			<div id="mographRainEnd" class="anim-trigger"></div>
-			<div class="touch-fix-overlay"></div>
-		</div>
-		<div class="center-box">
-			<div class="mograph-video-container">
-				<video id="mograph-video" muted controls playsinline width="100%" src="graphics/2D Logo reel.mp4" type="video/mp4"/>
-			</div>
-			<div class="mograph-list">
-				<ul>
-					<li href="graphics/2D Logo reel.mp4">2D Logos</li>
-					<li href="graphics/3D Logo.mp4">3D Logos</li>
-					<li href="graphics/Tutorials.mp4">Video Tutorials</li>
-					<li href="graphics/Social Media.mp4">Social Media</li>
-				</ul>
-			</div>
-			<script type="text/javascript" src="scripts/videoMenu.js"></script>
-		</div>
-	</section>
-	<section hidden>
-		<div class="section-header">
-			<a href="https://manoloaferva.github.io/portfolio3d/Page"><h1>3D & Interactive</h1></a>
-		</div>
-	</section>
+
+	<div id="video-overlay" style="display: none;">
+		<button class="close-button" onclick="closeViewer()">X</button>
+		<iframe id="video-player" width="80%" height="80%" src=" " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	</div>
+
 	<footer>
 		<div class="footer-box">
 			<h3>Contact me:</h3>
@@ -179,6 +85,12 @@
 			</ul>
 		</div>
 	</footer>
-	<script type="module" src="scripts/lumeApp.js"></script>
+	<script src="scripts/viewer.js"></script>
+	<script type="text/javascript">
+		function closeViewer() {
+			document.getElementById('video-overlay').style.display = 'none';
+			document.getElementById('video-player').setAttribute('src', '');
+		};
+	</script>
 </body>
 </html>
